@@ -5,7 +5,7 @@ from PysparkWrapper import PysparkWrapper
 logger = LoggerWrapper.init_logger(__name__)
 
 def insert_to_table(**kwargs):
-  logger.debug("Write data into Hive with table name: " + kwargs["input"])
+  logger.debug("Write data into Hive with table name: " + kwargs["input"]["target"])
   kwargs["input"]["data"].write.format("hive").mode("append").saveAsTable(kwargs["input"]["target"])
   logger.debug("Successfully write data into " + kwargs["input"]["target"] + " table")
   #kwargs["output"] = kwargs["sqlcontext"].sql("select * from " + kwargs["input"]["target"])
