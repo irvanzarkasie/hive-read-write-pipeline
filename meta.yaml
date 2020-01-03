@@ -1,0 +1,6 @@
+package:
+  name: logger-wrapper
+  version: 0.1
+
+source:
+  path: .
