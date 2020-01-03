@@ -1,5 +1,5 @@
 package:
-  name: logger-wrapper
+  name: hive-read-write-pipeline
   version: 0.1
 
 source:
